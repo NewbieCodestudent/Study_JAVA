@@ -1,0 +1,14 @@
+package test.com.score;
+
+public interface ScoreDB_postgres {
+
+	String DRIVER_NAME = "org.postgresql.Driver";
+	String URL = "jdbc:postgresql://localhost:5432/golfzon";
+	String USER = "kosta";
+	String PASSWORD = "hi123456";
+	String SQL_INSERT = "insert into score(num, name, kor, eng, math)"
+			+ " values(nextval('seq_score'), ?, ?, ?, ?);";
+	String SQL_SELECT_ALL = "select * from score;";
+	String SQL_UPDATE = "update score set name=?, kor=?, eng=?, math=? where num=?";
+	
+}

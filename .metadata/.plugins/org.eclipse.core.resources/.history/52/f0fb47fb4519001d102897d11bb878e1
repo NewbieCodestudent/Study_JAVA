@@ -1,0 +1,16 @@
+package test.com.board;
+
+public class BoardMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Board");
+		
+		BoardDAOimpl result = new BoardDAOimpl();
+		BoardVO vo = new BoardVO();
+		
+		System.out.println(result.input(vo));
+		System.out.println();
+		
+	}//end main
+
+}//end class

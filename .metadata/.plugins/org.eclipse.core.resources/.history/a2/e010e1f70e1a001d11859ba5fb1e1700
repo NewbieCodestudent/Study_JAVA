@@ -1,0 +1,21 @@
+package test.com.empoyee;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Employee");
+		
+		//EmployeeVO, EmployeeDAO, EmployeeDAOimpl
+		//EmployeeMain, EmployeeMenu
+		//num, fist_name, last_name, email, salary, hire_date
+		
+		
+		
+		
+		
+		
+		
+		
+	}//end main
+
+}//end class

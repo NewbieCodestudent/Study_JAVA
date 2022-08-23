@@ -1,0 +1,22 @@
+package test.com.empoyee;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Employee");
+		
+		EmployeeDAO dao = new EmployeeDAOimpl();
+		EmployeeVO vo = new EmployeeVO();
+		
+		System.out.println(dao.insert(vo););
+		
+		
+		
+		
+		
+		
+		
+		
+	}//end main
+
+}//end class

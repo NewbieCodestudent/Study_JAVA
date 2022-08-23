@@ -1,0 +1,13 @@
+package test.com.score;
+
+import java.util.List;
+
+public class ScoreMain {
+
+	public static void main(String[] args) {
+
+		
+		
+	}// end main
+
+}// end class

@@ -1,0 +1,16 @@
+package test.com.member;
+
+import test.com.board.model.BoardDAOimpl;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Member");
+		
+		MemberDAO dao = new BoardDAOimpl();
+		
+		
+		
+	}// end main
+
+}// end class

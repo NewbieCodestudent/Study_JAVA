@@ -1,0 +1,43 @@
+package test.com.empoyee;
+
+import java.util.List;
+
+public class EmployeeDAOimpl implements EmployeeDAO {
+
+	@Override
+	public int insert(EmployeeVO vo) {
+		System.out.println("insert");
+		return 0;
+	}
+
+	@Override
+	public int update(EmployeeVO vo) {
+		System.out.println("update");
+		return 0;
+	}
+
+	@Override
+	public int delete(EmployeeVO vo) {
+		System.out.println("delete");
+		return 0;
+	}
+
+	@Override
+	public EmployeeVO selectOne(EmployeeVO vo) {
+		System.out.println("selectOne");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> selectAll() {
+		System.out.println("selectAll");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> searchList(String searchKey, String SearchWord) {
+		System.out.println("searchList");
+		return null;
+	}
+
+}

@@ -1,0 +1,55 @@
+package test.com.empoyee;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
+
+public class EmployeeDAOimpl implements EmployeeDAO {
+
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	public EmployeeDAOimpl() {
+		Class.forName(EmployeeDB_postgres.DRIVER_NAME);
+		System.out.println("driver successed");
+	}
+	
+	@Override
+	public int insert(EmployeeVO vo) {
+		System.out.println("insert");
+		return 0;
+	}
+
+	@Override
+	public int update(EmployeeVO vo) {
+		System.out.println("update");
+		return 0;
+	}
+
+	@Override
+	public int delete(EmployeeVO vo) {
+		System.out.println("delete");
+		return 0;
+	}
+
+	@Override
+	public EmployeeVO selectOne(EmployeeVO vo) {
+		System.out.println("selectOne");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> selectAll() {
+		System.out.println("selectAll");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> searchList(String searchKey, String SearchWord) {
+		System.out.println("searchList");
+		return null;
+	}
+
+}

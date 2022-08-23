@@ -1,0 +1,22 @@
+package test.com.empoyee;
+
+import java.util.Date;
+
+public class EmployeeVO {
+
+	private int num;
+	private String fist_name;
+	private String last_name;
+	private String email;
+	private int salary;
+	private Date wdate = new Date();
+	
+	public EmployeeVO() {
+		num = 1;
+		fist_name = "lee";
+		last_name = "jae seok";
+		email = "lee@naver.com";
+		salary = 3;
+	}
+	
+}

@@ -1,0 +1,43 @@
+package test.com.board;
+
+import java.util.List;
+
+public class BoardMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Board");
+		
+		BoardDAO dao = new BoardDAOimpl();
+		BoardVO vo = new BoardVO();
+		
+		// insert test
+//		vo.setTitle("java");
+//		vo.setContent("study");
+//		vo.setWriter("kim");
+//		int result =  dao.insert(vo);
+		
+		// update test
+//		vo.setTitle("SQL");
+//		vo.setContent("STUDY");
+//		vo.setWriter("lee");
+//		vo.setNum(6);
+//		int result = dao.update(vo);
+		
+		// delete test
+//		vo.setNum(6);
+//		int result = dao.delete(vo);
+		
+//		vo.setNum(3);
+//		BoardVO vo2 = dao.searchOne(vo);
+//		System.out.println(vo2);
+		
+		
+		
+		List<BoardVO> list = dao.searchAll();
+		for (BoardVO x : list) {
+			System.out.println(x);
+		}
+		
+	}//end main
+
+}//end class

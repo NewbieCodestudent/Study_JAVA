@@ -1,0 +1,5 @@
+package test.com.empoyee;
+
+public class EmployeeVO {
+
+}

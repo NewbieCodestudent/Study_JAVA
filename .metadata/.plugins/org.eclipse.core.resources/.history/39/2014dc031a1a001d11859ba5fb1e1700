@@ -1,0 +1,114 @@
+package test.com.empoyee;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+import test.com.empoyee.model.EmployeeDAO;
+import test.com.empoyee.model.EmployeeDAOimpl;
+import test.com.empoyee.model.EmployeeVO;
+
+public class EmployeeMenu {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Employee");
+		EmployeeDAO dao = new EmployeeDAOimpl();
+		Reader r = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(r);
+		boolean bool = true;
+		String menu = "y";
+		do {
+			System.out.println("====================Employee===================");
+			System.out.println("1.입력 2.수정 3.삭제 4.번호검색 5.키워드검색 6.전체인원");
+			System.out.println("종료 [x] 계속[아무키] ");
+			System.out.println("===============================================");
+			System.out.println("메뉴를 선택하세요.");
+			menu = br.readLine();
+			
+			if(menu.equals("1")) {
+				System.out.println("===============================================");
+				System.out.println("1.사원정보 입력페이지");
+				System.out.println("===============================================");
+				System.out.println("first_name : ");
+				String first_name = br.readLine();
+				System.out.println("last_name : ");
+				String last_name = br.readLine();
+				System.out.println("email : ");
+				String email = br.readLine();
+				System.out.println("salary : ");
+				String salary = br.readLine();
+				int salary2 = Integer.parseInt(salary);
+				EmployeeVO vo = new EmployeeVO();
+				vo.setfirst_name(first_name);
+				vo.setLast_name(last_name);
+				vo.setEmail(email);
+				vo.setSalary(salary2);
+				int result = dao.insert(vo);
+				System.out.println("result : " + result);
+				if (result ==1) System.out.println("입력성공");
+				else System.out.println("입력오류");
+			} else if(menu.equals("2")) {
+				System.out.println("===============================================");
+				System.out.println("2.사원정보 수정페이지");
+				System.out.println("===============================================");
+				System.out.println("사원번호 : ");
+				String num = br.readLine();
+				int num2 = Integer.parseInt(num);
+				System.out.println("first_name : ");
+				String first_name = br.readLine();
+				System.out.println("last_name : ");
+				String last_name = br.readLine();
+				System.out.println("email : ");
+				String email = br.readLine();
+				System.out.println("salary : ");
+				String salary = br.readLine();
+				int salary2 = Integer.parseInt(salary);
+				EmployeeVO vo = new EmployeeVO();
+				vo.setNum(num2);
+				vo.setfirst_name(first_name);
+				vo.setLast_name(last_name);
+				vo.setEmail(email);
+				vo.setSalary(salary2);
+				int result = dao.update(vo);
+				System.out.println("result : " + result);
+				if (result ==1) System.out.println("수정성공");
+				else System.out.println("수정오류");
+			} else if(menu.equals("3")) {
+				System.out.println("===============================================");
+				System.out.println("3.사원정보 삭제페이지");
+				System.out.println("===============================================");
+				System.out.println("사원번호 : ");
+				String num = br.readLine();
+				int num2 = Integer.parseInt(num);
+				EmployeeVO vo = new EmployeeVO();
+				vo.setNum(num2);
+				int result = dao.delete(vo);
+				System.out.println("result : " + result);
+				if (result ==1) System.out.println("삭제성공");
+				else System.out.println("삭제오류");
+			} else if(menu.equals("4")) {
+				System.out.println("===============================================");
+				System.out.println("4.사원정보 번호검색 페이지");
+				System.out.println("===============================================");
+				System.out.println("사원번호 : ");
+				String num = br.readLine();
+//				int num2 = Integer.parseInt(num);
+				EmployeeVO vo = new EmployeeVO();
+				if (vo.getNum(num) == 0) {
+					System.out.println("해당사원이 없습니다.");
+				} else {
+					System.out.print(vo.getNum() + " | ");
+					System.out.print(vo.getFirst_name() + " | ");
+					System.out.print(vo.getLast_name() + " | ");
+					System.out.print(vo.getEmail() + " | ");
+					System.out.print(vo.getSalary() + " | ");
+					System.out.println(vo.getWdate());
+				}
+			} 
+		}
+		
+		
+
+	}//end main
+
+}//end class

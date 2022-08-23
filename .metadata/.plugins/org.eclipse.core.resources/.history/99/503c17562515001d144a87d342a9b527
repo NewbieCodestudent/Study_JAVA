@@ -1,0 +1,13 @@
+package test.com;
+
+public class Solution {
+
+	public long[] solution(int x, int n) {
+		long[] answer = {};
+		return answer;
+	}
+	
+	public Solution() {
+		System.out.println(solution(2,5));
+	}
+}

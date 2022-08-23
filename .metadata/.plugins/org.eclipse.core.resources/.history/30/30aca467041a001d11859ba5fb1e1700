@@ -1,0 +1,10 @@
+package test.com.board;
+
+public class BoardMain_yangssem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,26 @@
+package test.com.empoyee;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+import test.com.empoyee.model.EmployeeDAO;
+import test.com.empoyee.model.EmployeeDAOimpl;
+
+public class EmployeeMenu {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Employee");
+		EmployeeDAO dao = new EmployeeDAOimpl();
+		Reader r = new InputStreamReader(System.in);
+		BufferedReader br = new BufferedReader(r);
+		
+		boolean bool = true;
+		String menu = "y";
+		
+		
+		
+
+	}//end main
+
+}//end class

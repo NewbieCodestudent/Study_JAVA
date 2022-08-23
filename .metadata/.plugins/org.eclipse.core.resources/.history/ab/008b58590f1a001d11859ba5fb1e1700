@@ -1,0 +1,11 @@
+package test.com.empoyee;
+
+public interface EmployeeDB_postgres {
+	
+	String DRIVER_NAME = "";
+	String URL = "";
+	String USER = "";
+	String PASSWORD = "";
+	
+
+}

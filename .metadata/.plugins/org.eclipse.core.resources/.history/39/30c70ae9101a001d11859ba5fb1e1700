@@ -1,0 +1,15 @@
+package test.com.empoyee;
+
+public interface EmployeeDB_postgres {
+	
+	String DRIVER_NAME = "org.postgresql.Driver";
+	String URL = "";
+	String USER = "";
+	String PASSWORD = "";
+	String INSERT = "";
+	String UPDATE = "";
+	String DELETE = "";
+	
+	
+
+}

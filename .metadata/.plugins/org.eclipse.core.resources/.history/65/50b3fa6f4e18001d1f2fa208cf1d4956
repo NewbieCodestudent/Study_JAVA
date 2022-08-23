@@ -1,0 +1,19 @@
+package test.com.member;
+
+import java.util.List;
+
+public interface MemberDAO {
+
+	public String insert();
+
+	public int update(MemberVO vo);
+
+	public int delete(MemberVO vo);
+
+	public void selectAll();  // Array에 의한 것으로 변경
+
+	public void selectOne(int num);
+
+	public List<MemberVO> searchList(String x, String y);   // Array에 의한 것으로 변경
+
+}

@@ -1,0 +1,13 @@
+package test.com.score;
+
+public class ScoreMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Score");
+		
+		ScoreDAO dao = new ScoreDAOimpl();
+		ScoreVO vo = new ScoreVO();
+		
+	}// end main
+
+}// end class

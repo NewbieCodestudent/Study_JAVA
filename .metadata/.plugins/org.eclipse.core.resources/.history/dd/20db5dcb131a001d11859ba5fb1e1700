@@ -1,0 +1,30 @@
+package test.com.empoyee;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Employee");
+		
+		EmployeeDAO dao = new EmployeeDAOimpl();
+		EmployeeVO vo = new EmployeeVO();
+		
+		vo.setFist_name("lee");
+		vo.setLast_name("jae seok");
+		vo.setEmail("lee@naver.com");
+		vo.setSalary(500);
+		int result = dao.insert(vo);
+		
+//		vo.setFist_name("kim");
+//		vo.setLast_name("ji heok");
+//		vo.setEmail("kim@naver.com");
+//		vo.setSalary(700);
+//		vo.setNum(2);
+//		int result = dao.update(vo);
+		
+//		vo.setNum(3);
+//		int result = dao.delete(vo);
+		
+		
+	}//end main
+
+}//end class

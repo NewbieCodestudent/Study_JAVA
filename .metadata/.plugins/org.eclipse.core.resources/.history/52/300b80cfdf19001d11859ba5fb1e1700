@@ -1,0 +1,19 @@
+package test.com.score;
+
+public class ScoreMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Score");
+		
+		ScoreDAO dao = new ScoreDAOimpl();
+		ScoreVO vo = new ScoreVO();
+		
+		vo.setName("lee");
+		vo.setKor(80);
+		vo.setEng(80);
+		vo.setMath(80);
+		System.out.println(dao.insert(vo));
+		
+	}// end main
+
+}// end class

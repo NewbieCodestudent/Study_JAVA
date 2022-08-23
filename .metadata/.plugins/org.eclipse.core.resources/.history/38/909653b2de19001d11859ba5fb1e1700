@@ -1,0 +1,10 @@
+package test.com.score;
+
+public interface ScoreDB_postgres {
+
+	String DRIVER_NAME = "org.postgresql.Driver";
+	String URL = "jdbc:postgresql://localhost:5432/glofzon";
+	String USER = "kosta";
+	String PASSWORD = "hi123456";
+	
+}

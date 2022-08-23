@@ -1,0 +1,15 @@
+package test.com.empoyee;
+
+public interface EmployeeDB_postgres {
+	
+	String DRIVER_NAME = "org.postgresql.Driver";
+	String URL = "jdbc:postgresql://localhost:5432/golfzon";
+	String USER = "kosta";
+	String PASSWORD = "hi123456";
+	String INSERT = "";
+	String UPDATE = "";
+	String DELETE = "";
+	
+	
+
+}

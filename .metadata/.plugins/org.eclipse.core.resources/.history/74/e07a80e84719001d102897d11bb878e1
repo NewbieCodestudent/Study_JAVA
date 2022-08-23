@@ -1,0 +1,19 @@
+package test.com.board;
+
+public interface BoardDB_postgres {
+	// MemberMain에서 사용하기 위한 DB인터페이스
+	
+	// 인터페이스는 기본이 public static final 이다. 
+	/* public static final */ String DRIVER_NAME = "org.postgresql.Driver";  // driver 클래스의 주소
+	String URL = "jdbc:postgresql://localhost:5432/golfzon"; 
+	String USER = "kosta";
+	String PASSWORD = "hi123456";
+	String SQL_SELECT_ALL = "";
+	String SQL_INSERT = "insert into board(num, title, content, writer)"
+			+ "values(nextval('seq_board), ?, ?, ?);";
+	String SQL_UPDATE = "";
+	String SQL_DELETE = "";
+	String SQL_SELECT_ONE = "";
+	String SQL_SEARCH_LIST_NAME = "";
+	String SQL_SEARCH_LIST_TEL = "";
+}

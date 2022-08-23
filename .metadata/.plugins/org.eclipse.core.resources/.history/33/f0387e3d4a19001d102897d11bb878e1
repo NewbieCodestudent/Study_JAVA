@@ -1,0 +1,21 @@
+package test.com.board;
+
+public class BoardMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Board");
+		
+		BoardDAO dao = new BoardDAOimpl();
+		BoardVO vo = new BoardVO();
+		
+		vo.setTitle("java");
+		vo.setContent("study");
+		vo.setWriter("kim");
+		int result =  dao.insert(vo);
+		System.out.println("result : " + result);
+		
+		
+		
+	}//end main
+
+}//end class

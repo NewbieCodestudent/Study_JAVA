@@ -1,0 +1,14 @@
+package test.com.member;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		MemberDAOimpl result = new MemberDAOimpl();
+		MemberVO vo = new MemberVO();
+		
+		System.out.println(result.insert(vo));
+		System.out.println();
+
+	}//end main
+
+}//end class

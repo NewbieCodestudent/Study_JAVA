@@ -1,0 +1,70 @@
+package test.com.score;
+
+import java.util.List;
+
+public class ScoreMain {
+
+	public static void main(String[] args) {
+		System.out.println("Hello Score");
+		
+		ScoreDAO dao = new ScoreDAOimpl();
+		ScoreVO vo = new ScoreVO();
+		
+		//insert
+//		vo.setName("park");
+//		vo.setKor(70);
+//		vo.setEng(80);
+//		vo.setMath(90);
+//		int result = dao.insert(vo);
+//		System.out.println("result : " + result);
+		
+		//update
+//		vo.setNum(8);
+//		vo.setName("admin");
+//		vo.setKor(100);
+//		vo.setEng(100);
+//		vo.setMath(100);
+//		int result = dao.update(vo);
+//		System.out.println("result : " + result);
+		
+		//delete
+//		vo.setNum(8);
+//		int result = dao.delete(vo);
+//		System.out.println("result : " + result); 
+		
+		//select one
+//		vo.setNum(3);
+//		ScoreVO result = dao.selectOne(vo);
+//		System.out.println("result : " + result);
+		
+		//search list
+//		List<ScoreVO> vos = dao.searchList("name", "kim");
+//		for (ScoreVO x : vos) {
+//			System.out.println(x);
+//		}
+//		vos = dao.searchList("kor", "90");
+//		for (ScoreVO x : vos) {
+//			System.out.println(x);
+//		}
+//		vos = dao.searchList("eng", "80");
+//		for (ScoreVO x : vos) {
+//			System.out.println(x);
+//		}
+//		vos = dao.searchList("math", "10");
+//		for (ScoreVO x : vos) {
+//			System.out.println(x);
+//		}
+		
+		List<ScoreVO> list = dao.selectAll();
+		for (ScoreVO x : list) {
+			System.out.print(x.getNum() + " ");
+			System.out.print(x.getName() + " ");
+			System.out.print(x.getKor() + " ");
+			System.out.print(x.getEng() + " ");
+			System.out.print(x.getMath() + " ");
+			System.out.println(x.getTotal());
+		}
+		
+	}// end main
+
+}// end class

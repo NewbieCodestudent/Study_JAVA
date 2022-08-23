@@ -1,0 +1,14 @@
+package test.com.empoyee;
+
+import java.util.Date;
+
+public class EmployeeVO {
+
+	private int num;
+	private String fist_name;
+	private String last_name;
+	private String email;
+	private int salary;
+	private Date wdate = new Date();
+	
+}

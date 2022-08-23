@@ -1,0 +1,31 @@
+package test.com;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.List;
+
+public class Test04ObjectOutputStream {
+
+	public static void main(String[] args) throws ClassNotFoundException {
+		System.out.println("Hello ObjectOutputStream");
+
+		FileInputStream fis = null;
+		ObjectInputStream ois = null;
+		List<TestVO> vos = (List<TestVO>) ois.readObject();
+		
+		
+		try {
+			fis = new FileInputStream("C:\\golfzon\\javaStudy\\java18InputOutput\\test.db");
+			ois = new ObjectInputStream(fis);
+			System.out.println(vos);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}// end main
+
+}// end class

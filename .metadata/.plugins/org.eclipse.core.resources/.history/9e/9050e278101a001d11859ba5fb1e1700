@@ -1,0 +1,78 @@
+package test.com.empoyee;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+public class EmployeeDAOimpl implements EmployeeDAO {
+
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	
+	public EmployeeDAOimpl() {
+		try {
+			Class.forName(EmployeeDB_postgres.DRIVER_NAME);
+			System.out.println("driver successed");
+			
+			jdbcConnectionTest();
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void jdbcConnectionTest() {
+		try {
+			conn = DriverManager.getConnection(EmployeeDB_postgres.URL, EmployeeDB_postgres.USER, EmployeeDB_postgres.PASSWORD);
+			String sql = "select version() as version";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next() ) {
+				System.out.println(rs.getString("version"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public int insert(EmployeeVO vo) {
+		System.out.println("insert");
+		return 0;
+	}
+
+	@Override
+	public int update(EmployeeVO vo) {
+		System.out.println("update");
+		return 0;
+	}
+
+	@Override
+	public int delete(EmployeeVO vo) {
+		System.out.println("delete");
+		return 0;
+	}
+
+	@Override
+	public EmployeeVO selectOne(EmployeeVO vo) {
+		System.out.println("selectOne");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> selectAll() {
+		System.out.println("selectAll");
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> searchList(String searchKey, String SearchWord) {
+		System.out.println("searchList");
+		return null;
+	}
+
+}

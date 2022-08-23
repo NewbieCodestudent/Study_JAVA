@@ -1,0 +1,27 @@
+package homework.com;
+
+class asd {
+
+	public static void main(String[] args) {
+		int x = 1;
+		int y = 1;
+		while (x < 1000) {
+			boolean seach = false;
+			
+			while (y < 1000) {
+				if (y%5 == 0 && y%7 == 0) { // 5와 7의 공배수를 찾음
+			    	seach = true;
+			        break; // 
+			    }
+			    y++;
+			}
+			
+			if(seach) {
+				System.out.println(y);
+			}
+			
+		}
+		
+	}
+
+}

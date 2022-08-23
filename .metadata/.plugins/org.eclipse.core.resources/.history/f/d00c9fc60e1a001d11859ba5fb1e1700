@@ -1,0 +1,43 @@
+package test.com.empoyee;
+
+import java.util.List;
+
+public class EmployeeDAOimpl implements EmployeeDAO {
+
+	@Override
+	public int insert(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public EmployeeVO selectOne(EmployeeVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> selectAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<EmployeeVO> searchList(String searchKey, String SearchWord) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,21 @@
+package test.com.member;
+
+public class MemberMain {
+
+	public static void main(String[] args) {
+		MemberDAOimpl result = new MemberDAOimpl();
+		
+//		System.out.println(result.insert());
+//		System.out.println();
+//		System.out.println();
+		
+		result.delete();
+		
+		result.selectAll();
+		System.out.println();
+		
+//		result.selectOne();
+		
+	}//end main
+
+}//end class

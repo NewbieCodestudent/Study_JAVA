@@ -1,0 +1,108 @@
+package test.com.empoyee;
+
+import java.util.Date;
+import java.util.Objects;
+
+public class EmployeeVO {
+
+	private int num;
+	private String first_name;
+	private String last_name;
+	private String email;
+	private int salary;
+	private Date wdate = new Date();
+
+	public EmployeeVO() {
+		num = 1;
+		first_name = "lee";
+		last_name = "jae seok";
+		email = "lee@naver.com";
+		salary = 500;
+	}
+
+	public EmployeeVO(int num, String first_name, String last_name, String email, int salary) {
+		System.out.println(num + first_name + last_name + email + salary);
+	}	
+	
+	@Override
+	public String toString() {
+		return "EmployeeVO [num=" + num + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
+				+ ", salary=" + salary + ", wdate=" + wdate + "]";
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public String getfirst_name() {
+		return first_name;
+	}
+
+	public void setfirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+
+	public String getLast_name() {
+		return last_name;
+	}
+
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	public Date getWdate() {
+		return wdate;
+	}
+
+	public void setWdate(Date wdate) {
+		this.wdate = wdate;
+	}
+	
+	public String getFirst_name() {
+		return first_name;
+	}
+
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(email, first_name, last_name, num, salary, wdate);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		EmployeeVO other = (EmployeeVO) obj;
+		return Objects.equals(email, other.email) && Objects.equals(first_name, other.first_name)
+				&& Objects.equals(last_name, other.last_name) && num == other.num && salary == other.salary
+				&& Objects.equals(wdate, other.wdate);
+	}
+
+}

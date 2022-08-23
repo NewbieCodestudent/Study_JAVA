@@ -1,0 +1,19 @@
+package test.com.score;
+
+import java.util.List;
+
+public interface ScoreDB_postgres {
+
+	public int insert(ScoreVO vo);
+
+	public int update(ScoreVO vo);
+
+	public int delete(ScoreVO vo);
+
+	public ScoreVO selectOne(ScoreVO vo);
+
+	public List<ScoreVO> selectAll();
+
+	public List<ScoreVO> searchList(String x, String y);
+
+}
